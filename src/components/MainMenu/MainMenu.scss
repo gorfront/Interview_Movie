@@ -1,0 +1,118 @@
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    height: 100vh;
+    width: 11rem;
+    padding: 1.5rem;
+    background: black;
+    list-style-type: none;
+    transition: all ease .25s;
+
+    position: absolute;
+    z-index: 10;
+
+    &__user {
+        display: none;
+        padding-top: 6rem;
+        padding-left: 2.5rem;
+        margin-top: 40rem;
+        margin-bottom: 5.5rem;
+
+        &>img {
+            width: 8.2rem;
+            height: 8.2rem;
+            border-radius: 50%;
+        }
+
+        &__name {
+            cursor: pointer;
+            color: white;
+            font-size: 2rem;
+        }
+    }
+
+    &:hover {
+        opacity: .8;
+        width: 30rem;
+        overflow-y: scroll;
+    }
+
+    &:hover &__user {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        width: 100%;
+
+        &__item {
+            cursor: pointer;
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding: 2.5rem;
+            transition: all ease .25s;
+            width: 100%;
+
+            &:hover {
+                background: #3B486D;
+                transition: all ease-in .25s;
+                border: none;
+                border-radius: 3px;
+                width: 25rem;
+            }
+
+            &--title {
+                display: none;
+                transition: all ease .25s;
+            }
+        }
+    }
+
+
+    &__footer {
+        margin-top: 20rem;
+        padding-left: 2.5rem;
+        display: none;
+        list-style-type: none;
+
+        &--item {
+            color: #858688;
+            cursor: pointer;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    &:hover &__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+.mainMenu__item--active {
+    background: #3B486D;
+    border-radius: 50%;
+}
+
+.mainMenu:hover .mainMenu__body__item--title {
+    display: block;
+    transition: all ease .25s;
+}

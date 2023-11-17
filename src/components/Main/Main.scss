@@ -1,0 +1,73 @@
+.main {
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-size: 50% 100% !important;
+    background-position: right !important;
+    position: relative;
+
+    &__video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        border: none;
+    }
+
+    &__title {
+        text-align: left;
+        font: normal normal bold 24px/42px Tajawal;
+        letter-spacing: .48rem;
+        color: #858688;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+
+    &__about {
+        margin-top: 1.5rem;
+        font-size: 3rem;
+        color: #f1f1f1;
+
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        font-weight: normal;
+    }
+
+    &__description {
+        color: #f1f1f1;
+        font-size: 2.4rem;
+        font-weight: normal;
+    }
+
+    &__buttons {
+        margin-top: 4rem;
+        display: flex;
+        gap: 1rem;
+
+        &--but {
+            text-align: center;
+            font: normal normal bold 3.2rem/3rem Tajawal;
+            letter-spacing: -0.32px;
+
+            padding: 2.1rem 7.2rem 1.9rem 7.2rem;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+        }
+
+        &--play {
+            background: #F1F1F1 0% 0% no-repeat padding-box;
+            color: #0C0C0C;
+
+            & > img {
+                margin-right: 1rem;
+            }
+        }
+
+        &--more {
+            background: transparent linear-gradient(128deg, #2727F5 0%, #001671 100%) 0% 0% no-repeat padding-box;
+            color: #F1F1F1;
+        }
+    }
+}
